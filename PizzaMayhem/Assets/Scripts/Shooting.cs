@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
-    public Transform FirePoint;
+    public Transform firePoint;
+    public GameObject bulletPrefab;
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetButtonDown("Fire1"))
         {
             Shoot();
         }
@@ -17,6 +18,6 @@ public class Shooting : MonoBehaviour
 
     private void Shoot()
     {
-
+        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 }
