@@ -12,5 +12,14 @@ public class Bullet : MonoBehaviour
     {
         rigid.velocity = transform.right * speed;
     }
-    
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Enemy enemy = collision.GetComponent<Enemy>();
+        if (enemy != null)
+        {
+            enemy.Damage(5);
+            Destroy(gameObject);
+        }
+    }
 }

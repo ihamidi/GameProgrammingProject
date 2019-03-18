@@ -5,5 +5,13 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 { 
     public int health = 10;
-    public int damage = 5;
+
+    public void Damage(int damageVal)
+    {
+        health = health - damageVal;
+        if(health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
 }
