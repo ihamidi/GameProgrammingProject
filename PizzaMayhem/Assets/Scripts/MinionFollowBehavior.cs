@@ -5,6 +5,7 @@ using UnityEngine;
 public class MinionFollowBehavior : StateMachineBehaviour {
 
     private Transform playerPos;
+    public float speed;
 
     // start
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
@@ -14,6 +15,7 @@ public class MinionFollowBehavior : StateMachineBehaviour {
 
     // update
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+        animator.transform.position = Vector2.MoveTowards(animator.transform.position, playerPos.position, speed * Time.deltaTime);
 	
 	}
 
