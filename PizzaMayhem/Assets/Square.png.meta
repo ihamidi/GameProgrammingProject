@@ -3,6 +3,7 @@ guid: 15d3eae62014f4310a81721ce3e74150
 TextureImporter:
   fileIDToRecycleName:
     21300000: Square_0
+    21300002: Square_1
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -134,16 +135,36 @@ TextureImporter:
         serializedVersion: 2
         x: 2
         y: 0
-        width: 1
+        width: 2
         height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 1, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 531b43c73669b41c5bc9226733bf4e28
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Square_1
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1
+        width: 1
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb6cd78b1979d45d8ac78ce3a4c0bd5c
       vertices: []
       indices: 
       edges: []
