@@ -999,13 +999,13 @@ TextureImporter:
       name: roads2W_35
       rect:
         serializedVersion: 2
-        x: 210
-        y: 143
-        width: 20
-        height: 20
+        x: 219
+        y: 148
+        width: 1
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 1, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1023,8 +1023,8 @@ TextureImporter:
         y: 143
         width: 20
         height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.08656311, y: 0.50000155}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

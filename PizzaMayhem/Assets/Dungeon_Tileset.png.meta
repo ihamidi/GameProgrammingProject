@@ -1033,13 +1033,13 @@ TextureImporter:
       name: Dungeon_Tileset_22
       rect:
         serializedVersion: 2
-        x: 50
-        y: 590
-        width: 25
-        height: 25
+        x: 58
+        y: 587
+        width: 1
+        height: 28
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 1, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -2354,9 +2354,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 200
-        y: 515
-        width: 25
-        height: 25
+        y: 511
+        width: 16
+        height: 17
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
