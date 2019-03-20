@@ -57,6 +57,7 @@ public class PizzaBoyController : MonoBehaviour
             LifeCounter.text = lives.ToString();
       
 
-
+
+
     }
 }
