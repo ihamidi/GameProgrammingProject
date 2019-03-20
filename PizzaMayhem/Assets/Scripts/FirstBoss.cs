@@ -29,7 +29,7 @@ public class FirstBoss : MonoBehaviour
         {
             transform.position = this.transform.position;
         }
-        else if(Vector2.Distance(transform.position, player.position) < retreatDistanc)
+        else if(Vector2.Distance(transform.position, player.position) < retreatDistance)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
         }
