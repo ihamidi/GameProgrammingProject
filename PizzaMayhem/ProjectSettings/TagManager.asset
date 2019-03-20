@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Bullet
   - Lifecount
+  - Boss
   layers:
   - Default
   - TransparentFX
