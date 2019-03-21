@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3082852693571795945}
   m_Layer: 0
   m_Name: FirstBoss
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,6 +95,7 @@ MonoBehaviour:
   speed: 10
   stoppingDistance: 4
   retreatDistance: 2
-  timeBetShots: 0
-  startTimeBetShots: 0
+  startTimeBetShots: 2
   player: {fileID: 7621205140135453083, guid: cfa02a31b003a534c8fa6debc305915b, type: 3}
+  projectile: {fileID: 7197368812369244298, guid: e92852770d6224446a6d2334043823bb,
+    type: 3}

@@ -8,9 +8,10 @@ public class FirstBoss : MonoBehaviour
     public float speed = 10f;
     public float stoppingDistance;
     public float retreatDistance;
-    public float timeBetShots;
+    private float timeBetShots;
     public float startTimeBetShots;
-    public Transform player;
+    private Transform player;
+    public GameObject projectile;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +33,16 @@ public class FirstBoss : MonoBehaviour
         else if(Vector2.Distance(transform.position, player.position) < retreatDistance)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
+        }
+
+        if(timeBetShots <= 0)
+        {
+            Instantiate(projectile, transform.position, Quaternion.identity);
+            timeBetShots = startTimeBetShots;
+        }
+        else
+        {
+            timeBetShots -= Time.deltaTime;
         }
     }
 }
