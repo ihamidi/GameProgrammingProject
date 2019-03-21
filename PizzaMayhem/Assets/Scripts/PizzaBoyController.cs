@@ -18,7 +18,6 @@ public class PizzaBoyController : MonoBehaviour
         faceRight = true;
         // Find a reference to the ScoreCounter GameObject
         GameObject LifeCount = GameObject.Find("Lifecount"); // 2
-        LifeCounter.gameObject.SetActive(true);
         LifeCounter.text = "3";
     }
 
