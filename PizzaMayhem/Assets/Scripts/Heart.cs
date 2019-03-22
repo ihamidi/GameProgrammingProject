@@ -10,7 +10,7 @@ public class Heart : MonoBehaviour
     {
         int lives = int.Parse(LifeCounter.text);
         lives += 1;
-        if (lives == 0)
+      
 
         // Convert the score back to a string and display it
         LifeCounter.text = lives.ToString();
