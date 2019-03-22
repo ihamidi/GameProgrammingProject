@@ -96,6 +96,5 @@ MonoBehaviour:
   stoppingDistance: 4
   retreatDistance: 2
   startTimeBetShots: 2
-  player: {fileID: 7621205140135453083, guid: cfa02a31b003a534c8fa6debc305915b, type: 3}
-  projectile: {fileID: 7197368812369244298, guid: e92852770d6224446a6d2334043823bb,
+  projectile: {fileID: 4386027593802846563, guid: fffed21243889e4429e9ad56fc790a1a,
     type: 3}
