@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PizzaBoyController : MonoBehaviour
@@ -50,13 +51,21 @@ public class PizzaBoyController : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D coll)
     {
-            int lives = int.Parse(LifeCounter.text); 
-            lives -= 1;
-            // Convert the score back to a string and display it
-            LifeCounter.text = lives.ToString();
+        int lives = int.Parse(LifeCounter.text); 
+        lives -= 1;
+        if(lives==0)
+        {
+            LoadByIndex(0);
+        }
+        // Convert the score back to a string and display it
+        LifeCounter.text = lives.ToString();
       
 
 
 
+    }
+    public void LoadByIndex(int sceneindex)
+    {
+        SceneManager.LoadScene(sceneindex);
     }
 }
