@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\MinionIdleBehavior.cs" />
      <Compile Include="Assets\Scripts\PizzaBoyController.cs" />
      <Compile Include="Assets\Scripts\PlayButton.cs" />
+     <Compile Include="Assets\Scripts\QuitButton.cs" />
      <Compile Include="Assets\Scripts\Shooting.cs" />
      <Compile Include="Assets\Scripts\Testing.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
