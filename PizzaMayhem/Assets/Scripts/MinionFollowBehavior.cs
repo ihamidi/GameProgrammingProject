@@ -1,22 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
-public class MinionFollowBehavior : StateMachineBehaviour {
+public class MinionFollowBehavior : MinionController
+{
 
     private Transform playerPos;
     public float speed;
+    public float distance = 3f;
 
     // start
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;
-	
-	}
+        base.OnStateEnter(animator, stateInfo, layerIndex);
+
+    }
 
     // update
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-        animator.transform.position = Vector2.MoveTowards(animator.transform.position, playerPos.position, speed * Time.deltaTime);
-	
+        setDestination(playerPos.position);
 	}
 
     // stops

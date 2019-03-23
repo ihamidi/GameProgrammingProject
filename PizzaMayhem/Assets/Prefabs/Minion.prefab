@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 1709540481597801300}
   - component: {fileID: 1709540481597801302}
   - component: {fileID: 1709540481597801305}
-  - component: {fileID: 6112236255429496010}
   - component: {fileID: 3335246819866236295}
+  - component: {fileID: 6407695477440612628}
   m_Layer: 10
   m_Name: Minion
   m_TagString: Enemy
@@ -122,21 +122,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
---- !u!111 &6112236255429496010
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1709540481597801301}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!95 &3335246819866236295
 Animator:
   serializedVersion: 3
@@ -147,7 +132,7 @@ Animator:
   m_GameObject: {fileID: 1709540481597801301}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9f420b2f3f2498e4c99dd8b3ac7b49da, type: 2}
+  m_Controller: {fileID: 9100000, guid: ca39b580faf4d8d44b417a1eb597f161, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -156,3 +141,25 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!195 &6407695477440612628
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1709540481597801301}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.115
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 0.29
+  m_BaseOffset: 0.145
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4

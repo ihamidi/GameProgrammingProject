@@ -1,20 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
-public class MinionIdleBehavior : StateMachineBehaviour {
+public class MinionIdleBehavior : MinionController {
 
-	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-	
-	}
+    private Transform playerPos;
+    public float distance;
+
+    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+        playerPos = GameObject.FindGameObjectWithTag("Player").transform;
+        base.OnStateEnter(animator, stateInfo, layerIndex);
+    }
 
     // update
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
+        if(Vector2.Distance(animator.transform.position, playerPos.position) < distance){
             animator.SetBool("isFollowing", true);
         }
-	}
+    }
 
 	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 	
