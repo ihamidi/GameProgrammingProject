@@ -95999,6 +95999,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Heart (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8722460180998873045, guid: 36c2412be44756e48bcad63a29198b8b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 8722460180998873040, guid: 36c2412be44756e48bcad63a29198b8b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -96253,7 +96258,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1446862409}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 65.927765, y: 52.74237, z: 4.7865868}
+  m_LocalPosition: {x: 65.927765, y: 52.74237, z: -3.73}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -96964,6 +96969,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Heart (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8722460180998873045, guid: 36c2412be44756e48bcad63a29198b8b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 8722460180998873040, guid: 36c2412be44756e48bcad63a29198b8b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -96972,7 +96982,7 @@ PrefabInstance:
     - target: {fileID: 8722460180998873040, guid: 36c2412be44756e48bcad63a29198b8b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 41.2
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 8722460180998873040, guid: 36c2412be44756e48bcad63a29198b8b,
         type: 3}

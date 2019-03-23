@@ -45,4 +45,15 @@ public class FirstBoss : MonoBehaviour
             timeBetShots -= Time.deltaTime;
         }
     }
+    public int health = 100;
+
+    public void Damage(int damageVal)
+    {
+        health = health - damageVal;
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
 }
