@@ -1,4 +1,4 @@
 sceneSetups:
-- path: C:/Users/Mahdi/Desktop/LightningTalks/LightningTalk/Assets/Scenes/_Scene_0.unity
+- path: Assets/Scenes/Scene_Level_1.unity
   isLoaded: 1
   isActive: 1

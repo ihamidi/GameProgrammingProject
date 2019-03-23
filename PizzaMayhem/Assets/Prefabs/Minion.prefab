@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1709540481597801302}
   - component: {fileID: 1709540481597801305}
   - component: {fileID: 3335246819866236295}
-  - component: {fileID: 6407695477440612628}
   m_Layer: 10
   m_Name: Minion
   m_TagString: Enemy
@@ -141,25 +140,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!195 &6407695477440612628
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1709540481597801301}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.115
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 0.29
-  m_BaseOffset: 0.145
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4

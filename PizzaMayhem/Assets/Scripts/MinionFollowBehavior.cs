@@ -19,11 +19,11 @@ public class MinionFollowBehavior : MinionController
 
     // update
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-        setDestination(playerPos.position);
-	}
+        animator.transform.position = Vector2.MoveTowards(animator.transform.position, playerPos.position, 50);
+    }
 
     // stops
-	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 	
 	}
 
