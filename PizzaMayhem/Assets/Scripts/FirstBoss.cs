@@ -37,7 +37,17 @@ public class FirstBoss : MonoBehaviour
 
         if(timeBetShots <= 0)
         {
-            Instantiate(projectile, transform.position, Quaternion.identity);
+            Vector2 bulletrotate = transform.position-player.position; 
+            //Bullet1.Rotate(bulletrotate,Space.World);
+            //Instantiate(projectile, transform.position, Quaternion.identity);
+            Quaternion bulletangle = new Quaternion();
+            bulletangle.Set(bulletrotate.x, bulletrotate.y, 0, 0);
+            
+            
+            //bulletrotate.y=bulletrotate.y+ Mathf.Cos((45 * Mathf.PI) / 180) * 1;
+            //bulletrotate.x=bulletrotate.x+ Mathf.Cos((45 * Mathf.PI) / 180) * 1;
+            Instantiate(projectile, transform.position, bulletangle);
+            //FireAtPlayer();
             timeBetShots = startTimeBetShots;
         }
         else
@@ -54,6 +64,17 @@ public class FirstBoss : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+    void FireAtPlayer()
+    {
+        Instantiate(projectile);
+        projectile.transform.position = transform.position;
+        Vector2 direction = player.position - projectile.transform.position;
+        direction.Normalize();
+       // direction
+        //direction.Set(direction.x +  2, direction.y +  2));
+        projectile.GetComponent<Rigidbody2D>().velocity =
+                direction;
     }
 
 }

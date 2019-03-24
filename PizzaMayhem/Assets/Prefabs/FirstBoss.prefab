@@ -95,6 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8c624ae38e772f4a8965e7bcf17679f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numberOfProjectiles: 2
   speed: 10
   stoppingDistance: 4
   retreatDistance: 2
