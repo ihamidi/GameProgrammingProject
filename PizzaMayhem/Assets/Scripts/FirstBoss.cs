@@ -46,8 +46,8 @@ public class FirstBoss : MonoBehaviour
             
             //bulletrotate.y=bulletrotate.y+ Mathf.Cos((45 * Mathf.PI) / 180) * 1;
             //bulletrotate.x=bulletrotate.x+ Mathf.Cos((45 * Mathf.PI) / 180) * 1;
-            Instantiate(projectile, transform.position, bulletangle);
-            //FireAtPlayer();
+            //Instantiate(projectile, transform.position, bulletangle);
+            FireAtPlayer();
             timeBetShots = startTimeBetShots;
         }
         else
@@ -67,14 +67,35 @@ public class FirstBoss : MonoBehaviour
     }
     void FireAtPlayer()
     {
-        Instantiate(projectile);
+        /*Instantiate(projectile);
         projectile.transform.position = transform.position;
         Vector2 direction = player.position - projectile.transform.position;
         direction.Normalize();
        // direction
         //direction.Set(direction.x +  2, direction.y +  2));
         projectile.GetComponent<Rigidbody2D>().velocity =
-                direction;
-    }
+                direction;*/
 
+        float angleStep = 360f / 5;
+        float angle = 0f;
+        Vector2 startPoint = transform.position;
+        Quaternion bulletangle = new Quaternion();
+        Vector2 bulletrotate = transform.position - player.position;
+        bulletangle.Set(bulletrotate.x, bulletrotate.y, 0, 0);
+        for (int i = 0; i <= 5 - 1; i++)
+        {
+
+            float projectileDirXposition = startPoint.x + Mathf.Sin((angle * Mathf.PI) / 180) * 1;
+            float projectileDirYposition = startPoint.y + Mathf.Cos((angle * Mathf.PI) / 180) * 1;
+
+            Vector2 projectileVector = new Vector2(projectileDirXposition, projectileDirYposition);
+            Vector2 projectileMoveDirection = (projectileVector - startPoint).normalized;
+
+            var proj = Instantiate(projectile, startPoint, bulletangle);
+            proj.GetComponent<Rigidbody2D>().velocity =
+                new Vector2(projectileMoveDirection.x, projectileMoveDirection.y);
+
+            angle += angleStep;
+        }
+    }
 }
