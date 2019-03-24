@@ -7,6 +7,7 @@ public class MinionFollowBehavior : MinionController
 {
 
     private Transform playerPos;
+    private Rigidbody2D rb;
     public float speed;
     public float distance = 3f;
 
@@ -14,12 +15,13 @@ public class MinionFollowBehavior : MinionController
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;
         base.OnStateEnter(animator, stateInfo, layerIndex);
+        rb = animator.gameObject.GetComponent<Rigidbody2D>();
 
     }
 
     // update
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-        animator.transform.position = Vector2.MoveTowards(animator.transform.position, playerPos.position, 50);
+        rb.MovePosition(playerPos.position);
     }
 
     // stops
