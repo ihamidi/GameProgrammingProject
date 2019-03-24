@@ -8,10 +8,10 @@ public class Bullet : MonoBehaviour
     public Rigidbody2D rigid;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        rigid.velocity = transform.right * speed;
-    }
+    //void Start()
+    //{
+      //  rigid.velocity = transform.right * speed;
+    //}
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -21,6 +21,7 @@ public class Bullet : MonoBehaviour
             enemy.Damage(5);
             
         }
-        Destroy(gameObject);
+        if(collision.gameObject.tag != "Player")
+            Destroy(gameObject);
     }
 }
