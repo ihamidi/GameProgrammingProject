@@ -52,7 +52,7 @@ public class PizzaBoyController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D coll)
     {
         int lives = int.Parse(LifeCounter.text);
-        if(coll.gameObject.tag=="Bullet" || coll.gameObject.tag=="CheeseBall")
+        if(coll.gameObject.tag=="CheeseBall")
             lives -= 1;
         if(lives==0)
         {

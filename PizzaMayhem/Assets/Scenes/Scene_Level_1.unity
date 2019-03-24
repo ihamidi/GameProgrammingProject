@@ -97522,24 +97522,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7621205140135453081, guid: cfa02a31b003a534c8fa6debc305915b,
         type: 3}
-      propertyPath: speed
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7621205140135453081, guid: cfa02a31b003a534c8fa6debc305915b,
-        type: 3}
       propertyPath: LifeCounter
       value: 
       objectReference: {fileID: 2110443342}
-    - target: {fileID: 7621205140135453086, guid: cfa02a31b003a534c8fa6debc305915b,
-        type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7621205140135453086, guid: cfa02a31b003a534c8fa6debc305915b,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfa02a31b003a534c8fa6debc305915b, type: 3}
 --- !u!1 &2014020720

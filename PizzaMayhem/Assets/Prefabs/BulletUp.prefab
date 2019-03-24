@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7197368812369244301}
   - component: {fileID: 7197368812369244303}
   - component: {fileID: 7197368812369244302}
+  - component: {fileID: 3654345951011019379}
   m_Layer: 10
   m_Name: BulletUp
   m_TagString: Untagged
@@ -118,3 +119,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
+--- !u!114 &3654345951011019379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7197368812369244298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3eb2c78b70421ca479549beaec99b1bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
+  rigid: {fileID: 7197368812369244303}

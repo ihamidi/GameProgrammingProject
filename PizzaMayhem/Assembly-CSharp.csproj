@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\BossFight.cs" />
     <Compile Include="Assets\Scripts\BossSpawn.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
+    <Compile Include="Assets\Scripts\BulletUp.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\CheeseBall.cs" />
     <Compile Include="Assets\Scripts\Door.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="Assets\Scripts\QuitButton.cs" />
     <Compile Include="Assets\Scripts\Shooting.cs" />
     <Compile Include="Assets\Scripts\Testing.cs" />
+    <Compile Include="Assets\Scripts\UpBullet.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Mahdi/Desktop/GameProgrammingProject/PizzaMayhem/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
