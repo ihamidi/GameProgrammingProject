@@ -12,11 +12,12 @@ public class FirstBoss : MonoBehaviour
     public float startTimeBetShots;
     private Transform player;
     public GameObject projectile;
-
+    public int health = 100;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+
     }
 
     // Update is called once per frame
@@ -54,8 +55,22 @@ public class FirstBoss : MonoBehaviour
         {
             timeBetShots -= Time.deltaTime;
         }
+
+        
     }
-    public int health = 100;
+    void OnTriggerEnter2D(Collider2D coll)
+    {
+        if (coll.gameObject.tag == "Bullet") {
+            health = health - 10;
+            if (health <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
+
+        
+    }
+    
 
     public void Damage(int damageVal)
     {
