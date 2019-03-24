@@ -10,10 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 3082852693571795946}
   - component: {fileID: 3082852693571795947}
-  - component: {fileID: 3082852693571795945}
   - component: {fileID: 5732902277840643035}
   - component: {fileID: 1153376217}
   - component: {fileID: 1153376218}
+  - component: {fileID: 8055363374292431339}
+  - component: {fileID: 1031443064165934209}
   m_Layer: 10
   m_Name: FirstBoss
   m_TagString: Enemy
@@ -83,25 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3082852693571795945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3082852693571795948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8c624ae38e772f4a8965e7bcf17679f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  stoppingDistance: 4
-  retreatDistance: 2
-  startTimeBetShots: 2
-  projectile: {fileID: 4386027593802846563, guid: fffed21243889e4429e9ad56fc790a1a,
-    type: 3}
-  health: 100
 --- !u!58 &5732902277840643035
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -165,3 +147,35 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &8055363374292431339
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3082852693571795948}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a55d7dea781fbd04fa7af503884f3e2a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1031443064165934209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3082852693571795948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8c624ae38e772f4a8965e7bcf17679f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
