@@ -16,7 +16,8 @@ public class Heart : MonoBehaviour
 
         // Convert the score back to a string and display it
         LifeCounter.text = lives.ToString();
-        Destroy(gameObject);
+        if (coll.gameObject.tag == "Player")
+            Destroy(gameObject);
 
 
 
