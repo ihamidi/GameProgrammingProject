@@ -15,6 +15,7 @@ public class Melee : MonoBehaviour
             enemy.Damage(5);
 
         }
-        Destroy(gameObject);
+        if (collision.gameObject.tag != "Player")
+            Destroy(gameObject);
     }
 }
