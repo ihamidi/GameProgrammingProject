@@ -7,6 +7,7 @@ public class Shooting : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPrefab;
     public GameObject bulletUpPrefab;
+    public GameObject cutterPrefab;
     
     // Update is called once per frame
     void Update()
@@ -16,9 +17,9 @@ public class Shooting : MonoBehaviour
         {
             Shoot();
         }
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetKey("space"))
         {
-            ShootUp();
+            MeleeEnemy();
         }
     }
 
@@ -39,8 +40,8 @@ public class Shooting : MonoBehaviour
         bullet.GetComponent<Rigidbody2D>().velocity = direction * 10;
     }
 
-    private void ShootUp()
+    private void MeleeEnemy()
     {
-        Instantiate(bulletUpPrefab, firePoint.position, firePoint.rotation);
+        Instantiate(cutterPrefab, firePoint.position, firePoint.rotation);
     }
 }

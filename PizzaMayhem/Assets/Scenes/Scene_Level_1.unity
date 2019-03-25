@@ -97525,6 +97525,12 @@ PrefabInstance:
       propertyPath: LifeCounter
       value: 
       objectReference: {fileID: 2110443342}
+    - target: {fileID: 7621205140135453080, guid: cfa02a31b003a534c8fa6debc305915b,
+        type: 3}
+      propertyPath: cutterPrefab
+      value: 
+      objectReference: {fileID: 7865568661442630687, guid: 299ced6f4f52b374da3923ff09c5f4b9,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfa02a31b003a534c8fa6debc305915b, type: 3}
 --- !u!1 &2014020720
