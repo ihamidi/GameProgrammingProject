@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: 7621205140135453082}
   - component: {fileID: 7621205140135453081}
   - component: {fileID: 7621205140135453080}
+  - component: {fileID: 4056718073495283056}
   - component: {fileID: 7621205140135453086}
   - component: {fileID: 7621205140135453087}
   m_Layer: 10
@@ -206,6 +207,19 @@ MonoBehaviour:
     type: 3}
   bulletUpPrefab: {fileID: 7197368812369244298, guid: 2dfba3292dcce724eafd40fbcb673ca9,
     type: 3}
+  cutterPrefab: {fileID: 0}
+--- !u!114 &4056718073495283056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7621205140135453077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c07d73093b3284fa487cfe0fb1d8bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &7621205140135453086
 Rigidbody2D:
   serializedVersion: 4

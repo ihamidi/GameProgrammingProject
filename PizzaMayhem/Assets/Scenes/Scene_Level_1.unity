@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 37364690}
   - component: {fileID: 37364689}
   - component: {fileID: 37364692}
+  - component: {fileID: 37364694}
   - component: {fileID: 37364693}
   m_Layer: 0
   m_Name: Camera
@@ -222,6 +223,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boss: {fileID: 3082852693571795948, guid: 3c3a82a47e688b646aaffa05e3342046, type: 3}
+--- !u!114 &37364694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37364688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c07d73093b3284fa487cfe0fb1d8bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &78806867
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,7 +607,7 @@ GameObject:
   - component: {fileID: 255139097}
   m_Layer: 5
   m_Name: heartGui
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81209,8 +81222,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 44, y: 13, z: 0}
     second:
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 2
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -96482,18 +96495,18 @@ Tilemap:
       m_ColliderType: 1
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 2482
+  - m_RefCount: 2481
     m_Data: {fileID: 11400000, guid: eeb3a4449677944c3882481a92a432bf, type: 2}
   - m_RefCount: 534
     m_Data: {fileID: 11400000, guid: 5666c12cff4d5014fbecd57719dcb573, type: 2}
-  - m_RefCount: 659
+  - m_RefCount: 660
     m_Data: {fileID: 11400000, guid: 23eeda598a52a934faf61f764d165e55, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 2482
+  - m_RefCount: 2481
     m_Data: {fileID: 21300326, guid: ee77726adc74048c5ba9effb5269c217, type: 3}
   - m_RefCount: 534
     m_Data: {fileID: 21300002, guid: 8e9993d14fad084428f4b0cc1bc624c2, type: 3}
-  - m_RefCount: 659
+  - m_RefCount: 660
     m_Data: {fileID: 21300000, guid: 8e9993d14fad084428f4b0cc1bc624c2, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 3675
@@ -97670,9 +97683,10 @@ GameObject:
   - component: {fileID: 1773127023}
   - component: {fileID: 1773127022}
   - component: {fileID: 1773127021}
+  - component: {fileID: 1773127025}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97757,6 +97771,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1773127025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773127020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c07d73093b3284fa487cfe0fb1d8bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1773361776
 GameObject:
   m_ObjectHideFlags: 0
@@ -98829,7 +98855,7 @@ GameObject:
   - component: {fileID: 2110443342}
   m_Layer: 5
   m_Name: Lifes
-  m_TagString: Lifecount
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
