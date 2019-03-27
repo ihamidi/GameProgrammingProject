@@ -9,7 +9,7 @@ public class MinionFollowBehavior : MinionController
     private Transform playerPos;
     private Rigidbody2D rb;
     public float speed;
-    public float distance = 3f;
+    public float distance;
 
     // start
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
