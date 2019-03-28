@@ -79,6 +79,7 @@
     <Compile Include="Assets\Scripts\PlayButton.cs" />
     <Compile Include="Assets\Scripts\QuitButton.cs" />
     <Compile Include="Assets\Scripts\Shooting.cs" />
+    <Compile Include="Assets\Scripts\Slot.cs" />
     <Compile Include="Assets\Scripts\Testing.cs" />
     <Compile Include="Assets\Scripts\UpBullet.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
