@@ -6,23 +6,25 @@ using UnityEngine.UI;
 public class HealthItem : MonoBehaviour
 {
     private Transform player;
-    public Text LifeCounter;
+    public GameObject LifeCounter;
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        LifeCounter = GameObject.FindGameObjectWithTag("Lifecount");
     }
 
     public void Use()
     {
         Destroy(gameObject);
-        int lives = int.Parse(LifeCounter.text);
+        Text lc = LifeCounter.GetComponent<Text>();
+        int lives = int.Parse(lc.text);
         
             lives += 1;
 
 
         // Convert the score back to a string and display it
-        LifeCounter.text = lives.ToString();
+        lc.text = lives.ToString();
         
             
     }
