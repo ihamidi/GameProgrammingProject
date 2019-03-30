@@ -10,7 +10,6 @@ public class HealthItem : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        Instantiate(LifeCounter);
     }
 
     public void Use()
