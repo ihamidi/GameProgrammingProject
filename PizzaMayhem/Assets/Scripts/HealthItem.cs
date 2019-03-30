@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class HealthItem : MonoBehaviour
 {
     private Transform player;
+    public Text LifeCounter;
 
     private void Start()
     {
@@ -14,11 +15,16 @@ public class HealthItem : MonoBehaviour
 
     public void Use()
     {
-        // add lives to counter
-        // ......
-
-        // Then Destroy button object
         Destroy(gameObject);
+        int lives = int.Parse(LifeCounter.text);
+        
+            lives += 1;
+
+
+        // Convert the score back to a string and display it
+        LifeCounter.text = lives.ToString();
+        
+            
     }
    
 }
