@@ -171,7 +171,7 @@ TextureImporter:
     21300332: roads2W_166
     21300334: roads2W_167
   externalObjects: {}
-  serializedVersion: 9
+  serializedVersion: 7
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -2699,10 +2699,10 @@ TextureImporter:
       name: roads2W_120
       rect:
         serializedVersion: 2
-        x: 410
-        y: 83
-        width: 20
-        height: 20
+        x: 402
+        y: 87
+        width: 23
+        height: 21
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3440,9 +3440,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 30
-        y: 23
-        width: 20
-        height: 20
+        y: 22
+        width: 11
+        height: 21
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
