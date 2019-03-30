@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 4749270294931758521}
   - component: {fileID: 512018540457280574}
   - component: {fileID: 3319926298615939372}
-  - component: {fileID: 2465674635640170316}
   m_Layer: 5
   m_Name: HealthButton
   m_TagString: Untagged
@@ -129,17 +128,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2465674635640170316}
-        m_MethodName: AddLife
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &512018540457280574
@@ -167,20 +155,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a77bf815b8af0f4469c69e5ae5888382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LifeCounter: {fileID: 6910844159125205964, guid: a3164855fbdbc7745828e68abb16bae2,
-    type: 3}
-  lives: 3
---- !u!114 &2465674635640170316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4018231751317799880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a148246fb491a5146aa942aa658fc356, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LifeCounter: {fileID: 6910844159125205964, guid: a3164855fbdbc7745828e68abb16bae2,
+  LifeCounter: {fileID: 609502079744119143, guid: 6f1361533643f7046b9c874cd6cd4277,
     type: 3}
