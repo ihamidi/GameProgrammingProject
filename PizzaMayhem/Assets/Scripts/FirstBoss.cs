@@ -5,7 +5,7 @@ using System;
 
 public class FirstBoss : MonoBehaviour
 {
-    public int maxHealth = 10;
+    public int maxHealth = 100;
     public int currentHealth;
 
     // action event for when the current health is changed, assigned to empty delegate so exception is not thrown
@@ -19,7 +19,7 @@ public class FirstBoss : MonoBehaviour
     void OnTriggerEnter2D(Collider2D coll)
     {
         if (coll.gameObject.tag == "Bullet") {
-            Dammage(10);
+            Damage(10);
         }
     }
 

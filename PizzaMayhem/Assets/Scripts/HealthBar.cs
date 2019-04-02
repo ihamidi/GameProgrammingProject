@@ -6,35 +6,19 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    [SerializeField]
-    private Image foregroundImage;
-    [SerializeField]
-    private float updateSpeedSeconds = 0.5f;
+    public Image foregroundImage;
+
+    public float updateSpeedSeconds = 0.5f;
+
 
     private void Awake()
     {
         GetComponentInParent<FirstBoss>().OnHealthPctChanged += HandleHealthChanged;
+        GetComponentInParent<Enemy>().OnHealthPctChanged += HandleHealthChanged;
     }
 
     private void HandleHealthChanged(float pct)
     {
-        // creates a smoother effect
-        StartCoroutine(ChangeToPct(pct));
-    }
-
-    private IEnumerator ChangeToPct(float pct)
-    {
-        float preChangedPct = foregroundImage.fillAmount;
-        float elapsed = 0f;
-
-        while(elapsed < updateSpeedSeconds)
-        {
-            elapsed += Time.deltaTime;
-            foregroundImage.fillAmount = Mathf.Lerp(preChangedPct, pct, elapsed / updateSpeedSeconds);
-            yield return null;
-        }
-
         foregroundImage.fillAmount = pct;
     }
-
 }
