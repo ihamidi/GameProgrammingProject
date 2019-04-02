@@ -1,16 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 
 public class Enemy : MonoBehaviour
 { 
-    public int health = 10;
+    public int maxHealth = 10;
+    public int currentHealth;
+
+    public event Action<float> OnHealthPctChanged = delegate { };
+
+    private void OnEnable()
+    {
+        currentHealth = maxHealth;
+    }
 
     public void Damage(int damageVal)
     {
-        health = health - damageVal;
-        if(health <= 0)
+        currentHealth -= damageVal;
+
+        float currentHealthPct = (float)currentHealth / (float)maxHealth;
+        OnHealthPctChanged(currentHealth);
+
+        if(currentHealth <= 0)
         {
             Destroy(gameObject);
         }
