@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour
         currentHealth -= damageVal;
         // figures out current health percent
         float currentHealthPct = (float)currentHealth / (float)maxHealth;
-        OnHealthPctChanged(currentHealth);
+        OnHealthPctChanged(currentHealthPct);
 
         if(currentHealth <= 0)
         {
