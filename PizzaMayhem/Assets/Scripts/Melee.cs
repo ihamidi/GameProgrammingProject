@@ -4,8 +4,21 @@ using UnityEngine;
 
 public class Melee : MonoBehaviour
 {
-    public float speed = 20f;
+    private float rechargeTime;
+    public float publicRechargeTime;
     public Rigidbody2D rigid;
+
+    /*private void Update()
+    {
+        if(rechargeTime <= 0)
+        {
+            rechargeTime = publicRechargeTime;
+        }
+        else
+        {
+            rechargeTime -= Time.deltaTime;
+        }
+    }*/
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

@@ -8,7 +8,9 @@ public class Shooting : MonoBehaviour
     public GameObject bulletPrefab;
     public GameObject bulletUpPrefab;
     public GameObject cutterPrefab;
-    
+    private float rechargeTime;
+    public float publicRechargeTime;
+
     // Update is called once per frame
     void Update()
     {
@@ -17,10 +19,20 @@ public class Shooting : MonoBehaviour
         {
             Shoot();
         }
-        if (Input.GetKey("space"))
+
+        if(rechargeTime <= 0)
         {
-            MeleeEnemy();
+            if (Input.GetKey("space"))
+            {
+                MeleeEnemy();
+            }
+            rechargeTime = publicRechargeTime;
         }
+        else
+        {
+            rechargeTime -= Time.deltaTime;
+        }
+            
     }
 
     private void Shoot()
