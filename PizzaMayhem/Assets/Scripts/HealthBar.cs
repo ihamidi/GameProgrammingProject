@@ -6,18 +6,16 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    public Image foregroundImage;
-    public float updateSpeedSeconds = 0.5f;
+    Vector2 localScale;
 
-
-    private void Start()
+    void Start()
     {
-        //GetComponentInParent<FirstBoss>().OnHealthPctChanged += HandleHealthChanged;
-        //GetComponentInParent<Enemy>().OnHealthPctChanged += HandleHealthChanged;
+        localScale = transform.localScale;
     }
 
-    private void HandleHealthChanged(float pct)
+    void Update()
     {
-        foregroundImage.fillAmount = pct;
+        localScale.x = Enemy.currentHealth;
+        transform.localScale = localScale;
     }
 }
