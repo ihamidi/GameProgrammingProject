@@ -54,17 +54,17 @@ public class PizzaBoyController : MonoBehaviour
        int lives = int.Parse(LifeCounter.text);
         if(coll.gameObject.tag=="CheeseBall")
             lives -= 1;
-        if(lives==0)
+        if (coll.gameObject.tag == "Enemy")
+            lives -= 1;
+        if (lives==0)
         {
             SceneManager.LoadScene(4);
         }
         // Convert the score back to a string and display it
         LifeCounter.text = lives.ToString();
-      
-
-
-
     }
+
+
     public void LoadByIndex(int sceneindex)
     {
         SceneManager.LoadScene(sceneindex);

@@ -19,7 +19,8 @@ public class HealthItem : MonoBehaviour
         Destroy(gameObject);
         Text lc = LifeCounter.GetComponent<Text>();
         int lives = int.Parse(lc.text);
-        
+
+        if(lives < 5)
             lives += 1;
 
 

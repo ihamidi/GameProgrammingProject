@@ -6,13 +6,11 @@ using System;
 
 public class Enemy : MonoBehaviour
 { 
-    public static float currentHealth = .25f;
+    public static float currentHealth = 20;
 
     public void Damage(int damageVal)
     {
-        // convert damageVal into percentage
-        float damagePct = (float) damageVal / 100;
-        currentHealth -= damagePct;
+        currentHealth -= damageVal;
         
         if(currentHealth <= 0)
         {
