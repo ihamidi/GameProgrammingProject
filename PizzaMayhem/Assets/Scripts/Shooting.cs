@@ -10,6 +10,7 @@ public class Shooting : MonoBehaviour
     public GameObject cutterPrefab;
     private float rechargeTime;
     public float publicRechargeTime;
+    public static int ammo;
 
     // Update is called once per frame
     void Update()
@@ -17,7 +18,8 @@ public class Shooting : MonoBehaviour
       
         if (Input.GetMouseButtonDown(0))
         {
-            Shoot();
+            if(ammo > 0)
+                Shoot();
         }
 
         if(rechargeTime <= 0)
