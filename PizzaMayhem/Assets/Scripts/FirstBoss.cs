@@ -5,16 +5,7 @@ using System;
 
 public class FirstBoss : MonoBehaviour
 {
-    public int maxHealth = 100;
-    public int currentHealth;
-
-    // action event for when the current health is changed, assigned to empty delegate so exception is not thrown
-    public event Action<float> OnHealthPctChanged = delegate { };
-
-    private void OnEnable()
-    {
-        currentHealth = maxHealth;
-    }
+    public static float currentHealth = .25f;
 
     void OnTriggerEnter2D(Collider2D coll)
     {
@@ -25,10 +16,9 @@ public class FirstBoss : MonoBehaviour
 
     public void Damage(int damageVal)
     {
-        currentHealth -= damageVal;
-        // figures out current health percent
-        float currentHealthPct = (float)currentHealth / (float)maxHealth;
-        OnHealthPctChanged(currentHealth);
+        // convert damageVal into percentage
+        float damagePct = (float)damageVal / 100;
+        currentHealth -= damagePct;
 
         if (currentHealth <= 0)
         {

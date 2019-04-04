@@ -6,28 +6,34 @@ using UnityEngine.AI;
 public class MinionFollowBehavior : MinionController
 {
 
-    private Transform playerPos;
-    private Rigidbody2D rb;
     public float speed;
     public float distance;
+    private Transform player;
+    public GameObject enemy;
 
     // start
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-        playerPos = GameObject.FindGameObjectWithTag("Player").transform;
-        base.OnStateEnter(animator, stateInfo, layerIndex);
-        rb = animator.gameObject.GetComponent<Rigidbody2D>();
-
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        enemy = animator.gameObject;
     }
 
     // update
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-        rb.MovePosition(playerPos.position);
+
+        if (Vector2.Distance(animator.transform.position, player.position) < distance)
+        {
+            enemy.transform.position = Vector2.MoveTowards(animator.transform.position, player.position, speed * Time.deltaTime);
+        }
+        else
+        {
+            animator.SetBool("isIdle", true);
+        }
     }
 
     // stops
-    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 	
-	}
+	//}
 
 	// OnStateMove is called right after Animator.OnAnimatorMove(). Code that processes and affects root motion should be implemented here
 	//override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
