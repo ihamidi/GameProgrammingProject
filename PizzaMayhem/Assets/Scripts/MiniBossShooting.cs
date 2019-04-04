@@ -11,13 +11,13 @@ public class MiniBossShooting : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-
+        InvokeRepeating("FireAtPlayer", 1, 3);
     }
 
     // Update is called once per frame
     void Update()
     {
-        FireAtPlayer();
+        //FireAtPlayer();
     }
     void FireAtPlayer()
     {
@@ -30,8 +30,8 @@ public class MiniBossShooting : MonoBehaviour
         for (int i = 0; i <= 5 - 1; i++)
         {
 
-            float projectileDirXposition = startPoint.x + Mathf.Sin((angle * Mathf.PI) / 180) * 1;
-            float projectileDirYposition = startPoint.y + Mathf.Cos((angle * Mathf.PI) / 180) * 1;
+            float projectileDirXposition = startPoint.x + Mathf.Sin((angle * Mathf.PI) / 180) * 6;
+            float projectileDirYposition = startPoint.y + Mathf.Cos((angle * Mathf.PI) / 180) * 6;
 
             Vector2 projectileVector = new Vector2(projectileDirXposition, projectileDirYposition);
             Vector2 projectileMoveDirection = (projectileVector - startPoint).normalized;
