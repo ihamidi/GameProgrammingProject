@@ -12,6 +12,7 @@ public class PizzaBoyController : MonoBehaviour
     bool faceRight;
     bool faceLeft;
     public Text LifeCounter;
+    public int lives;
 
     private void Start()
     {
@@ -51,7 +52,7 @@ public class PizzaBoyController : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D coll)
     {
-       int lives = int.Parse(LifeCounter.text);
+        lives = int.Parse(LifeCounter.text);
         if(coll.gameObject.tag=="CheeseBall")
             lives -= 1;
         if (coll.gameObject.tag == "Enemy")
@@ -69,4 +70,17 @@ public class PizzaBoyController : MonoBehaviour
     {
         SceneManager.LoadScene(sceneindex);
     }
+
+    public void SavePlayer()
+    {
+        SaveSystem.SaveLives(this);
+    }
+
+    public void LoadPlayer()
+    {
+        PlayerData data = SaveSystem.LoadPlayer();
+
+        lives = data.lives;
+    }
+
 }
