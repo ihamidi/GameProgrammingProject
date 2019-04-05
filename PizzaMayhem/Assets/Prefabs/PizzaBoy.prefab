@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 7621205140135453086}
   - component: {fileID: 7621205140135453087}
   - component: {fileID: 760270483}
+  - component: {fileID: 9004673646977867007}
   m_Layer: 10
   m_Name: PizzaBoy
   m_TagString: Player
@@ -190,6 +191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7
   LifeCounter: {fileID: 0}
+  lives: 3
 --- !u!114 &7621205140135453080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,6 +211,7 @@ MonoBehaviour:
     type: 3}
   cutterPrefab: {fileID: 7865568661442630687, guid: 299ced6f4f52b374da3923ff09c5f4b9,
     type: 3}
+  publicRechargeTime: 0.3
 --- !u!50 &7621205140135453086
 Rigidbody2D:
   serializedVersion: 4
@@ -257,6 +260,23 @@ BoxCollider2D:
   m_Size: {x: 0.5685138, y: 1.6430203}
   m_EdgeRadius: 0
 --- !u!114 &760270483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7621205140135453077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b31c0aaaea40b49a9090a4c362badc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFull: 000000
+  slots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &9004673646977867007
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

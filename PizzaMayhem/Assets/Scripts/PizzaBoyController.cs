@@ -17,10 +17,9 @@ public class PizzaBoyController : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        faceRight = true;
         // Find a reference to the ScoreCounter GameObject
         GameObject LifeCount = GameObject.Find("Lifecount"); // 2
-        LifeCounter.text = "3";
+        LifeCounter.text = lives.ToString();
     }
 
     private void Update()
@@ -49,7 +48,7 @@ public class PizzaBoyController : MonoBehaviour
             faceLeft = false;
             transform.Rotate(0f, 180f, 0f);
         }
-    }
+    } 
     void OnTriggerEnter2D(Collider2D coll)
     {
         lives = int.Parse(LifeCounter.text);
