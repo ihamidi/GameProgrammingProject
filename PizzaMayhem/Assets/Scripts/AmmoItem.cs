@@ -20,7 +20,9 @@ public class AmmoItem : MonoBehaviour
         Destroy(gameObject);
         Text ac = AmmoCount.GetComponent<Text>();
         int ammo = int.Parse(ac.text);
-        ammo += 20;
+
+        if (ammo < 20)
+            ammo += 10;
 
         // Convert the score back to a string and display it
         ac.text = ammo.ToString();

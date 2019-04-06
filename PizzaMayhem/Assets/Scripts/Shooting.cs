@@ -21,7 +21,7 @@ public class Shooting : MonoBehaviour
     void Update()
     {
       
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(1))
         {
             ammo= int.Parse(AmmoCount.text);
             if (ammo > 0)
