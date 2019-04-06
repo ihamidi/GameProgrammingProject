@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class Shooting : MonoBehaviour
 {
@@ -8,9 +10,11 @@ public class Shooting : MonoBehaviour
     public GameObject bulletPrefab;
     public GameObject bulletUpPrefab;
     public GameObject cutterPrefab;
+    public Text AmmoCount;
+    public static int ammo;
     private float rechargeTime;
     public float publicRechargeTime;
-    public static int ammo;
+    
 
     // Update is called once per frame
     void Update()
@@ -18,8 +22,13 @@ public class Shooting : MonoBehaviour
       
         if (Input.GetMouseButtonDown(0))
         {
-            if(ammo > 0)
+            ammo= int.Parse(AmmoCount.text);
+            if (ammo > 0)
+            {
+                ammo--;
+                AmmoCount.text = ammo.ToString();
                 Shoot();
+            }
         }
 
         if(rechargeTime <= 0)
