@@ -14,7 +14,8 @@ public class Shooting : MonoBehaviour
     public static int ammo;
     private float rechargeTime;
     public float publicRechargeTime;
-    
+    public AudioSource shoot_sound;
+
 
     // Update is called once per frame
     void Update()
@@ -27,6 +28,7 @@ public class Shooting : MonoBehaviour
             {
                 ammo--;
                 AmmoCount.text = ammo.ToString();
+                shoot_sound.Play();
                 Shoot();
             }
         }

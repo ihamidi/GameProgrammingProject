@@ -9,12 +9,10 @@ public class MinionFollowBehavior : MinionController
     public float speed;
     public float distance;
     private Transform player;
-    public GameObject enemy;
 
     // start
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        enemy = animator.gameObject;
     }
 
     // update
@@ -22,7 +20,7 @@ public class MinionFollowBehavior : MinionController
 
         if (Vector2.Distance(animator.transform.position, player.position) < distance)
         {
-            enemy.transform.position = Vector2.MoveTowards(animator.transform.position, player.position, speed * Time.deltaTime);
+            animator.transform.position = Vector2.MoveTowards(animator.transform.position, player.position, speed * Time.deltaTime);
         }
         else
         {
