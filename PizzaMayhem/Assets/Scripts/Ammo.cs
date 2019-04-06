@@ -13,14 +13,13 @@ public class Ammo : MonoBehaviour
 
         int ammo = int.Parse(AmmoCount.text);
         if (coll.gameObject.tag == "Player")
+        {
             ammo += 20;
-
-
+            Destroy(gameObject);
+        }
+            
         // Convert the score back to a string and display it
         AmmoCount.text = ammo.ToString();
-        if (coll.gameObject.tag == "Player")
-            Destroy(gameObject);
-
     }
 
 }

@@ -11,6 +11,7 @@ TagManager:
   - Boss
   - CheeseBall
   - UI
+  - AmmoCount
   layers:
   - Default
   - TransparentFX
