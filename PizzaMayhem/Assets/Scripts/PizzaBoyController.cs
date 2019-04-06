@@ -19,6 +19,14 @@ public class PizzaBoyController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         // Find a reference to the ScoreCounter GameObject
         GameObject LifeCount = GameObject.Find("Lifecount"); // 2
+        if (SceneManager.GetActiveScene().buildIndex != 1)
+        {
+            LoadPlayer();
+        }
+        else
+        {
+            lives = 3;
+        }
         LifeCounter.text = lives.ToString();
     }
 

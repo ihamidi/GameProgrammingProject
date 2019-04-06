@@ -12,8 +12,13 @@ public class Door : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D coll)
     {
-        if (coll.gameObject.tag == "Player")    
+        if (coll.gameObject.tag == "Player")
+        {
             LoadByIndex(2);
+            PizzaBoyController boy = coll.GetComponent<PizzaBoyController>();
+            boy.SavePlayer();
+        }    
+            
         
     }
 }

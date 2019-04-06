@@ -18,6 +18,7 @@ public static class SaveSystem
         //writes data to file
         formatter.Serialize(stream, data);
         stream.Close();
+        Debug.LogError("Saved");
     }
 
     public static PlayerData LoadPlayer()
@@ -35,6 +36,7 @@ public static class SaveSystem
         }
         else
         {
+            Debug.LogError("Save not found " + path);
             return null;
         }
     }
