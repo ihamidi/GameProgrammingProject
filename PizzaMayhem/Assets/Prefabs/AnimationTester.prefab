@@ -105,7 +105,6 @@ GameObject:
   - component: {fileID: 7621205140135453086}
   - component: {fileID: 7621205140135453087}
   - component: {fileID: 760270483}
-  - component: {fileID: 843168255}
   m_Layer: 10
   m_Name: AnimationTester
   m_TagString: Player
@@ -195,7 +194,9 @@ MonoBehaviour:
     type: 3}
   cutterPrefab: {fileID: 7865568661442630687, guid: 299ced6f4f52b374da3923ff09c5f4b9,
     type: 3}
+  AmmoCount: {fileID: 0}
   publicRechargeTime: 0
+  shoot_sound: {fileID: 0}
 --- !u!50 &7621205140135453086
 Rigidbody2D:
   serializedVersion: 4
@@ -260,22 +261,3 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
---- !u!95 &843168255
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7621205140135453077}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6cd20e19e94e3454c93f2714112f9f88, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0

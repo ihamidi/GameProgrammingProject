@@ -22,7 +22,17 @@ public class PizzaBoyAC : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Vector2 moveInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        moveSpeed = moveInput.normalized * speed;
+        if ((Input.GetKey(KeyCode.UpArrow)))
+        {
+            animator.SetBool("walkBack", true);
+        }
+        if ((Input.GetKey(KeyCode.DownArrow)))
+        {
+            animator.SetBool("walkFront", true);
+        }
+        if ((Input.GetKey(KeyCode.LeftArrow)) || (Input.GetKey(KeyCode.RightArrow)))
+        {
+            animator.SetBool("walkSide", true);
+        }
     }
 }

@@ -13,6 +13,8 @@ public class PizzaBoyController : MonoBehaviour
     bool faceLeft;
     public Text LifeCounter;
     public int lives;
+    public Animator animator;
+    private float dirX, dirY;
 
     private void Start()
     {
@@ -32,8 +34,30 @@ public class PizzaBoyController : MonoBehaviour
 
     private void Update()
     {
-        Vector2 moveInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        dirX = Mathf.RoundToInt(Input.GetAxis("Horizontal"));
+        dirY = Mathf.RoundToInt(Input.GetAxis("Vertical"));
+        Vector2 moveInput = new Vector2(dirX, dirY);
         moveSpeed = moveInput.normalized * speed;
+        if(dirX == 0 && dirY == 1)
+        {
+            animator.SetInteger("Direction", 1);
+        }
+        if (dirX == 1 && dirY == 0)
+        {
+            animator.SetInteger("Direction", 3);
+        }
+        if (dirX == 0 && dirY == -1)
+        {
+            animator.SetInteger("Direction", 5);
+        }
+        if (dirX == -1 && dirY == 0)
+        {
+            animator.SetInteger("Direction", 7);
+        }
+        if (dirX == 0 && dirY == 0)
+        {
+            animator.SetInteger("Direction", 0);
+        }
     }
 
     private void FixedUpdate()
