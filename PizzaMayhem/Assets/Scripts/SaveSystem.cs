@@ -18,12 +18,47 @@ public static class SaveSystem
         //writes data to file
         formatter.Serialize(stream, data);
         stream.Close();
-        Debug.LogError("Saved");
+        Debug.LogError("Saved lives");
+    }
+
+    public static void SaveAmmo(Ammo ammo)
+    {
+        //makes file binary
+        BinaryFormatter formatter = new BinaryFormatter();
+        //stores file to a consistent location
+        string path = Application.persistentDataPath + "/ammo.txt";
+        FileStream stream = new FileStream(path, FileMode.Create);
+        //collects data
+        PlayerData data = new PlayerData(ammo);
+        //writes data to file
+        formatter.Serialize(stream, data);
+        stream.Close();
+        Debug.LogError("Saved ammo");
     }
 
     public static PlayerData LoadPlayer()
     {
         string path = Application.persistentDataPath + "/player.txt";
+        if (File.Exists(path))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open);
+
+            PlayerData data = formatter.Deserialize(stream) as PlayerData;
+            stream.Close();
+
+            return data;
+        }
+        else
+        {
+            Debug.LogError("Save not found " + path);
+            return null;
+        }
+    }
+
+    public static PlayerData LoadAmmo()
+    {
+        string path = Application.persistentDataPath + "/ammo.txt";
         if (File.Exists(path))
         {
             BinaryFormatter formatter = new BinaryFormatter();

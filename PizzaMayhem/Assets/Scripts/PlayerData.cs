@@ -6,9 +6,15 @@ using UnityEngine;
 public class PlayerData 
 {
     public int lives;
+    public int ammo;
 
     public PlayerData(PizzaBoyController player)
     {
         lives = player.lives;
+    }
+
+    public PlayerData(Ammo ammoCount)
+    {
+        ammo = ammoCount.ammo;
     }
 }
