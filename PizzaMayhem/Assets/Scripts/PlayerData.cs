@@ -13,7 +13,7 @@ public class PlayerData
         lives = player.lives;
     }
 
-    public PlayerData(Ammo ammoCount)
+    public PlayerData(AmmoItem ammoCount)
     {
         ammo = ammoCount.ammo;
     }

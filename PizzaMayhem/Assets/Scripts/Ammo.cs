@@ -11,14 +11,7 @@ public class Ammo : MonoBehaviour
 
     private void Start()
     {
-        if (SceneManager.GetActiveScene().buildIndex != 1)
-        {
-            LoadAmmo();
-        }
-        else
-        {
-            ammo = 0;
-        }
+        
 
         AmmoCount.text = ammo.ToString();
     }
@@ -37,10 +30,4 @@ public class Ammo : MonoBehaviour
         AmmoCount.text = ammo.ToString();
     }
 
-    public void LoadAmmo()
-    {
-        PlayerData data = SaveSystem.LoadAmmo();
-
-        ammo = data.ammo;
-    }
 }

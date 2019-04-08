@@ -21,7 +21,7 @@ public static class SaveSystem
         Debug.LogError("Saved lives");
     }
 
-    public static void SaveAmmo(Ammo ammo)
+    public static void SaveAmmo(AmmoItem ammo)
     {
         //makes file binary
         BinaryFormatter formatter = new BinaryFormatter();
