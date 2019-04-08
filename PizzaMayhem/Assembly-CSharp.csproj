@@ -63,6 +63,7 @@
      <Compile Include="Assets\Scripts\CharacterSpawn.cs" />
      <Compile Include="Assets\Scripts\CheeseBall.cs" />
      <Compile Include="Assets\Scripts\Door.cs" />
+     <Compile Include="Assets\Scripts\DoorLevel2.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\FirstBoss.cs" />
      <Compile Include="Assets\Scripts\FirstBossHealthBar.cs" />
