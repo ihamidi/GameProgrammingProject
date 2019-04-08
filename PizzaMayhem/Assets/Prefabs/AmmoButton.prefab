@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 288a5dfe2510a224087fd308068b4b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 4093375808708671948, guid: a0d8c065ddc71cc4d871d9ddc76fccca, type: 3}
+  item: {fileID: 6988001943489631691, guid: be966b1460d7a3247aa73571ed34f7c5, type: 3}
 --- !u!114 &3532644612286865811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,3 +155,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d806f525939ae714382db50c0d9eab02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AmmoCount: {fileID: 0}
+  ac: {fileID: 0}
+  ammo: 0

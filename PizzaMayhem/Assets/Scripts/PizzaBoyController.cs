@@ -12,7 +12,9 @@ public class PizzaBoyController : MonoBehaviour
     bool faceRight;
     bool faceLeft;
     public Text LifeCounter;
+    public Text ac;
     public int lives;
+    public int ammo;
     public Animator animator;
     private float dirX, dirY;
 
@@ -21,6 +23,8 @@ public class PizzaBoyController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         // Find a reference to the ScoreCounter GameObject
         GameObject LifeCount = GameObject.Find("Lifecount"); // 2
+        GameObject AmmoCount = GameObject.FindGameObjectWithTag("AmmoCount");
+        // lives save
         if (SceneManager.GetActiveScene().buildIndex != 1)
         {
             LoadPlayer();
@@ -28,7 +32,10 @@ public class PizzaBoyController : MonoBehaviour
         else
         {
             lives = 3;
+            ammo = 0;
         }
+       
+        ac.text = ammo.ToString();
         LifeCounter.text = lives.ToString();
     }
 
@@ -105,6 +112,7 @@ public class PizzaBoyController : MonoBehaviour
     public void SavePlayer()
     {
         SaveSystem.SaveLives(this);
+        //SaveSystem.SaveAmmo(this);
     }
 
     public void LoadPlayer()
@@ -112,6 +120,18 @@ public class PizzaBoyController : MonoBehaviour
         PlayerData data = SaveSystem.LoadPlayer();
 
         lives = data.lives;
+    }
+
+    public void SaveAmmo()
+    {
+       SaveSystem.SaveAmmo(this);
+    }
+
+    public void LoadAmmo()
+    {
+         PlayerData data = SaveSystem.LoadAmmo();
+
+        ammo = data.ammo;
     }
 
 }

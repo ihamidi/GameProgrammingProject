@@ -17,15 +17,6 @@ public class AmmoItem : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         AmmoCount = GameObject.FindGameObjectWithTag("AmmoCount");
         ac = AmmoCount.GetComponent<Text>();
-        if (SceneManager.GetActiveScene().buildIndex != 1)
-        {
-            LoadAmmo();
-        }
-        else
-        {
-            ammo = 0;
-        }
-        ac.text = ammo.ToString();
     }
 
     public void Use()
@@ -40,17 +31,5 @@ public class AmmoItem : MonoBehaviour
         ac.text = ammo.ToString();
 
 
-    }
-
-    public void SaveAmmo()
-    {
-        SaveSystem.SaveAmmo(this);
-    }
-
-    public void LoadAmmo()
-    {
-        PlayerData data = SaveSystem.LoadAmmo();
-
-        ammo = data.ammo;
     }
 }

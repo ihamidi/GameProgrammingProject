@@ -11,10 +11,8 @@ public class PlayerData
     public PlayerData(PizzaBoyController player)
     {
         lives = player.lives;
+        ammo = player.ammo;
     }
 
-    public PlayerData(AmmoItem ammoCount)
-    {
-        ammo = ammoCount.ammo;
-    }
+ 
 }
