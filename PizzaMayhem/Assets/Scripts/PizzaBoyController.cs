@@ -28,6 +28,7 @@ public class PizzaBoyController : MonoBehaviour
         if (SceneManager.GetActiveScene().buildIndex != 1)
         {
             LoadPlayer();
+            LoadAmmo();
         }
         else
         {
@@ -112,7 +113,6 @@ public class PizzaBoyController : MonoBehaviour
     public void SavePlayer()
     {
         SaveSystem.SaveLives(this);
-        //SaveSystem.SaveAmmo(this);
     }
 
     public void LoadPlayer()
@@ -129,7 +129,7 @@ public class PizzaBoyController : MonoBehaviour
 
     public void LoadAmmo()
     {
-         PlayerData data = SaveSystem.LoadAmmo();
+        PlayerData data = SaveSystem.LoadAmmo();
 
         ammo = data.ammo;
     }
