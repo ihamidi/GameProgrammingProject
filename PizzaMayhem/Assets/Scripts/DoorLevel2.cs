@@ -5,14 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class DoorLevel2 : MonoBehaviour
 {
-    public Scene scene;
+    public AudioSource source;
+
     public void LoadByIndex(int sceneindex)
     {
         SceneManager.LoadScene(sceneindex);
     }
     void OnTriggerEnter2D(Collider2D coll)
     {
-        
+        source.Play();
         if (coll.gameObject.tag == "Player")
         {
             LoadByIndex(3);

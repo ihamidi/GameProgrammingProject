@@ -98,7 +98,7 @@ public class PizzaBoyController : MonoBehaviour
             lives -= 1;
         if (lives==0)
         {
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(5);
         }
         // Convert the score back to a string and display it
         LifeCounter.text = lives.ToString();
