@@ -19,7 +19,7 @@ public class DoorLevel2 : MonoBehaviour
             LoadByIndex(3);
             PizzaBoyController boy = coll.GetComponent<PizzaBoyController>();
             boy.SavePlayer();
-            boy.SaveAmmo();
+            //boy.SaveAmmo();
            // AmmoItem ammo = coll.GetComponent<AmmoItem>();
             //ammo.SaveAmmo();
         }    
