@@ -23,7 +23,6 @@ public class PizzaBoyController : MonoBehaviour
 
     private void Start()
     {
-        OhBoy.Play();
         rb = GetComponent<Rigidbody2D>();
         // Find a reference to the ScoreCounter GameObject
         GameObject LifeCount = GameObject.Find("Lifecount"); // 2
