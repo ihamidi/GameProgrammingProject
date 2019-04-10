@@ -13,11 +13,21 @@ public class PizzaBoyController : MonoBehaviour
     bool faceLeft;
     public Text LifeCounter;
     public Text ac;
-    public int lives;
+    public int lives = 3;
     public int ammo;
     public Animator animator;
     public AudioSource OhBoy;
     public AudioSource ImHurt;
+
+    public Transform firePoint;
+    public GameObject bulletPrefab;
+    public GameObject bulletUpPrefab;
+    public GameObject cutterPrefab;
+    // public Text AmmoCount;
+    //public int ammo;
+    private float rechargeTime;
+    public float publicRechargeTime;
+    public AudioSource shoot_sound;
 
     private float dirX, dirY;
 
@@ -25,21 +35,29 @@ public class PizzaBoyController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         // Find a reference to the ScoreCounter GameObject
-        GameObject LifeCount = GameObject.Find("Lifecount"); // 2
-        GameObject AmmoCount = GameObject.FindGameObjectWithTag("AmmoCount");
-        // lives save
+        //GameObject LifeCount = GameObject.Find("Lifecount"); // 2
+        //GameObject AmmoCount = GameObject.FindGameObjectWithTag("AmmoCount");
+        
+         //loads data from GlobalControl script
+         lives = GlobalControl.Instance.lives;
+         ammo = GlobalControl.Instance.ammo;
+       /*
         if (SceneManager.GetActiveScene().buildIndex != 1)
         {
             LoadPlayer();
+            LoadAmmo();
         }
         else
         {
             lives = 3;
             ammo = 0;
         }
+        */
+        
        
         ac.text = ammo.ToString();
         LifeCounter.text = lives.ToString();
+
     }
 
     private void Update()
@@ -68,6 +86,35 @@ public class PizzaBoyController : MonoBehaviour
         {
             animator.SetInteger("Direction", 0);
         }
+
+
+        ammo = int.Parse(ac.text);
+        if (Input.GetMouseButtonDown(1))
+        {
+            ammo = int.Parse(ac.text);
+            if (ammo > 0)
+            {
+                ammo--;
+                ac.text = ammo.ToString();
+                shoot_sound.Play();
+                Shoot();
+            }
+        }
+
+        if (rechargeTime <= 0)
+        {
+            if (Input.GetKey("space"))
+            {
+                MeleeEnemy();
+            }
+            rechargeTime = publicRechargeTime;
+        }
+        else
+        {
+            rechargeTime -= Time.deltaTime;
+        }
+
+        SavePlayer();
     }
 
     private void FixedUpdate()
@@ -113,11 +160,16 @@ public class PizzaBoyController : MonoBehaviour
         SceneManager.LoadScene(sceneindex);
     }
 
+    
     public void SavePlayer()
     {
-        SaveSystem.SaveLives(this);
+        //SaveSystem.SaveLives(this);
+        GlobalControl.Instance.ammo = ammo;
+        GlobalControl.Instance.lives = lives;
+        
     }
 
+    /*
     public void LoadPlayer()
     {
         PlayerData data = SaveSystem.LoadPlayer();
@@ -126,7 +178,7 @@ public class PizzaBoyController : MonoBehaviour
         ammo = data.ammo;
     }
 
-   /* public void SaveAmmo()
+    public void SaveAmmo()
     {
        SaveSystem.SaveAmmo(this);
     }
@@ -136,6 +188,29 @@ public class PizzaBoyController : MonoBehaviour
         PlayerData data = SaveSystem.LoadAmmo();
 
         ammo = data.ammo;
-    }*/
+    }
+    */
 
+
+    private void Shoot()
+    {
+        Vector3 worldMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        Vector2 direction = (worldMousePos - transform.position);
+        direction.Normalize();
+
+        // Creates the bullet locally
+        GameObject bullet = (GameObject)Instantiate(
+                                bulletPrefab,
+                                transform.position,
+                                Quaternion.identity);
+        Debug.Log(direction.x + " " + direction.y);
+        // Adds velocity to the bullet
+        bullet.GetComponent<Rigidbody2D>().velocity = direction * 10;
+    }
+
+    private void MeleeEnemy()
+    {
+        Instantiate(cutterPrefab, firePoint.position, firePoint.rotation);
+    }
 }

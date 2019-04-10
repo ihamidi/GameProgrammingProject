@@ -15,8 +15,8 @@ public class Door : MonoBehaviour
         if (coll.gameObject.tag == "Player")
         {
             LoadByIndex(2);
-            PizzaBoyController boy = coll.GetComponent<PizzaBoyController>();
-            boy.SavePlayer();
+            //PizzaBoyController boy = coll.GetComponent<PizzaBoyController>();
+            //boy.SavePlayer();
             //AmmoItem ammo = coll.GetComponent<AmmoItem>();
             //ammo.SaveAmmo();
         }    

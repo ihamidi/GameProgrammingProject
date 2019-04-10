@@ -21,7 +21,7 @@ public static class SaveSystem
         Debug.LogError("Saved lives");
     }
 
-   /* public static void SaveAmmo(PizzaBoyController player)
+    public static void SaveAmmo(PizzaBoyController player)
     {
         //makes file binary
         BinaryFormatter formatter = new BinaryFormatter();
@@ -34,7 +34,7 @@ public static class SaveSystem
         formatter.Serialize(stream, data);
         stream.Close();
         Debug.LogError("Saved ammo");
-    }*/
+    }
 
     public static PlayerData LoadPlayer()
     {
@@ -58,7 +58,7 @@ public static class SaveSystem
 
     }
 
-    /*public static PlayerData LoadAmmo()
+    public static PlayerData LoadAmmo()
     {
         string path = Application.persistentDataPath + "/ammo.txt";
         if (File.Exists(path))
@@ -76,5 +76,5 @@ public static class SaveSystem
             Debug.LogError("Save not found " + path);
             return null;
         }
-    }*/
+    }
 }
