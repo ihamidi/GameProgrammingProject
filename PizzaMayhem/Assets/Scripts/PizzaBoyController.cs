@@ -16,10 +16,14 @@ public class PizzaBoyController : MonoBehaviour
     public int lives;
     public int ammo;
     public Animator animator;
+    public AudioSource OhBoy;
+    public AudioSource ImHurt;
+
     private float dirX, dirY;
 
     private void Start()
     {
+        OhBoy.Play();
         rb = GetComponent<Rigidbody2D>();
         // Find a reference to the ScoreCounter GameObject
         GameObject LifeCount = GameObject.Find("Lifecount"); // 2
@@ -90,6 +94,7 @@ public class PizzaBoyController : MonoBehaviour
     } 
     void OnTriggerEnter2D(Collider2D coll)
     {
+        ImHurt.Play();
         lives = int.Parse(LifeCounter.text);
         if(coll.gameObject.tag=="CheeseBall")
             lives -= 1;
