@@ -20,9 +20,11 @@ public class PizzaBoyController : MonoBehaviour
     public AudioSource ImHurt;
 
     public Transform firePoint;
+    public Transform firePointLeft;
     public GameObject bulletPrefab;
     public GameObject bulletUpPrefab;
     public GameObject cutterPrefab;
+    public GameObject cutterPrefabLeft;
     // public Text AmmoCount;
     //public int ammo;
     private float rechargeTime;
@@ -34,6 +36,8 @@ public class PizzaBoyController : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        faceRight = true;
+        faceLeft = false;
         // Find a reference to the ScoreCounter GameObject
         //GameObject LifeCount = GameObject.Find("Lifecount"); // 2
         //GameObject AmmoCount = GameObject.FindGameObjectWithTag("AmmoCount");
@@ -72,6 +76,8 @@ public class PizzaBoyController : MonoBehaviour
         }
         if (dirX == 1 && dirY == 0)
         {
+            faceLeft = false;
+            faceRight = true;
             animator.SetInteger("Direction", 3);
         }
         if (dirX == 0 && dirY == -1)
@@ -80,6 +86,8 @@ public class PizzaBoyController : MonoBehaviour
         }
         if (dirX == -1 && dirY == 0)
         {
+            faceLeft = true;
+            faceRight = false;
             animator.SetInteger("Direction", 7);
         }
         if (dirX == 0 && dirY == 0)
@@ -120,24 +128,8 @@ public class PizzaBoyController : MonoBehaviour
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + moveSpeed * Time.fixedDeltaTime);
-        Flip();
     }
-
-    private void Flip()
-    {
-        if ((faceRight && Input.GetKey(KeyCode.LeftArrow)))
-        {
-            faceLeft = true;
-            faceRight = false;
-            transform.Rotate(0f, 180f, 0f);
-        }
-        if ((faceLeft && Input.GetKey(KeyCode.RightArrow)))
-        {
-            faceRight = true;
-            faceLeft = false;
-            transform.Rotate(0f, 180f, 0f);
-        }
-    } 
+    
     void OnTriggerEnter2D(Collider2D coll)
     {
         ImHurt.Play();
@@ -169,29 +161,6 @@ public class PizzaBoyController : MonoBehaviour
         
     }
 
-    /*
-    public void LoadPlayer()
-    {
-        PlayerData data = SaveSystem.LoadPlayer();
-
-        lives = data.lives;
-        ammo = data.ammo;
-    }
-
-    public void SaveAmmo()
-    {
-       SaveSystem.SaveAmmo(this);
-    }
-
-    public void LoadAmmo()
-    {
-        PlayerData data = SaveSystem.LoadAmmo();
-
-        ammo = data.ammo;
-    }
-    */
-
-
     private void Shoot()
     {
         Vector3 worldMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -211,6 +180,13 @@ public class PizzaBoyController : MonoBehaviour
 
     private void MeleeEnemy()
     {
-        Instantiate(cutterPrefab, firePoint.position, firePoint.rotation);
+        if (faceRight)
+        {
+            Instantiate(cutterPrefab, firePoint.position, firePoint.rotation);
+        }
+        if (faceLeft)
+        {
+            Instantiate(cutterPrefabLeft, firePointLeft.position, firePointLeft.rotation);
+        }
     }
 }
