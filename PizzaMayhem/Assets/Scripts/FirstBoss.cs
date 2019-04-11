@@ -6,6 +6,8 @@ using System;
 public class FirstBoss : MonoBehaviour
 {
     public static float currentHealth = .25f;
+    public GameObject door;
+    public GameObject block;
 
     void OnTriggerEnter2D(Collider2D coll)
     {
@@ -22,6 +24,8 @@ public class FirstBoss : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            block.SetActive(false);
+            door.SetActive(true);
             Destroy(gameObject);
         }
     }

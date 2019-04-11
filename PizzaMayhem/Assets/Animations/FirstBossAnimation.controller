@@ -49,7 +49,7 @@ MonoBehaviour:
   speed: 10
   stoppingDistance: 5
   retreatDistance: 10
-  startTimeBetShots: 2
+  startTimeBetShots: 2.5
   projectile: {fileID: 4386027593802846563, guid: fffed21243889e4429e9ad56fc790a1a,
     type: 3}
   health: 100
