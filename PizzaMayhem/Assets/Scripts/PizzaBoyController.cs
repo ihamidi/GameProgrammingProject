@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PizzaBoyController : MonoBehaviour
 {
-    public float speed;
+    public static float speed = 7;
     private Rigidbody2D rb;
     private Vector2 moveSpeed;
     bool faceRight;

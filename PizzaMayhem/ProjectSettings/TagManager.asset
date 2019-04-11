@@ -12,6 +12,7 @@ TagManager:
   - CheeseBall
   - UI
   - AmmoCount
+  - GameMaster
   layers:
   - Default
   - TransparentFX

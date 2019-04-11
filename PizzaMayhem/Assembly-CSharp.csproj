@@ -88,6 +88,7 @@
      <Compile Include="Assets\Scripts\SaveSystem.cs" />
      <Compile Include="Assets\Scripts\Slot.cs" />
      <Compile Include="Assets\Scripts\Spawn.cs" />
+     <Compile Include="Assets\Scripts\SpeedItem.cs" />
      <Compile Include="Assets\Scripts\Testing.cs" />
      <Compile Include="Assets\Scripts\UpBullet.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
