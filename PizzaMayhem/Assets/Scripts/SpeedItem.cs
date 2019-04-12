@@ -26,16 +26,17 @@ public class SpeedItem : MonoBehaviour
     {
         if(usingSpeed == true)
         {
+            countDown -= 1 * Time.deltaTime; // begin countdown
             speed = 14;
             PizzaBoyController.speed = speed;
-            countDown -= 1 * Time.deltaTime;
 
+            // when countdown is finished reset everything
             if(countDown <= 0)
             {
                 usingSpeed = false;
-                countDown = time;
                 speed = 7;
                 PizzaBoyController.speed = speed;
+                countDown = time;
             }
         }
     }
