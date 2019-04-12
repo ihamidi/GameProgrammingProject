@@ -12,7 +12,7 @@ public class BossFight : StateMachineBehaviour
     private Transform player;
     public GameObject projectile;
     public int health = 100;
-    public GameObject boss;
+    private GameObject boss;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
