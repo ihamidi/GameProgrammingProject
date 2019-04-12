@@ -45,19 +45,13 @@ public class PizzaBoyController : MonoBehaviour
          //loads data from GlobalControl script
          lives = GlobalControl.Instance.lives;
          ammo = GlobalControl.Instance.ammo;
-       /*
-        if (SceneManager.GetActiveScene().buildIndex != 1)
-        {
-            LoadPlayer();
-            LoadAmmo();
-        }
-        else
+       
+        if (SceneManager.GetActiveScene().buildIndex == 1)
         {
             lives = 3;
             ammo = 0;
         }
-        */
-        
+
        
         ac.text = ammo.ToString();
         LifeCounter.text = lives.ToString();
