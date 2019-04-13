@@ -380,7 +380,7 @@ MonoBehaviour:
   m_Parent: {fileID: 11400000}
   m_Children: []
   m_Clips:
-  - m_Start: 6.033333333333333
+  - m_Start: 3.966666666666667
     m_ClipIn: 0
     m_Asset: {fileID: 114185996307979100}
     m_Duration: 1.9333333333333336
@@ -464,7 +464,7 @@ MonoBehaviour:
   m_Name: Animation Track
   m_EditorClassIdentifier: 
   m_Locked: 0
-  m_Muted: 0
+  m_Muted: 1
   m_CustomPlayableFullTypename: 
   m_AnimClip: {fileID: 0}
   m_Parent: {fileID: 11400000}
@@ -574,7 +574,7 @@ MonoBehaviour:
   m_Parent: {fileID: 11400000}
   m_Children: []
   m_Clips:
-  - m_Start: 2.0166666666666666
+  - m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: 114394041217250794}
     m_Duration: 2.033333333333333
@@ -690,7 +690,7 @@ MonoBehaviour:
   m_Name: Animation Track (1)
   m_EditorClassIdentifier: 
   m_Locked: 0
-  m_Muted: 0
+  m_Muted: 1
   m_CustomPlayableFullTypename: 
   m_AnimClip: {fileID: 74787360391881330}
   m_Parent: {fileID: 11400000}
@@ -731,7 +731,7 @@ MonoBehaviour:
   m_Parent: {fileID: 11400000}
   m_Children: []
   m_Clips:
-  - m_Start: 4.05
+  - m_Start: 1.9833333333333334
     m_ClipIn: 0
     m_Asset: {fileID: 114112854091266226}
     m_Duration: 1.9833333333333334
