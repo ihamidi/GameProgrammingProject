@@ -22,7 +22,6 @@ public class SpeedItem : MonoBehaviour
 
     public void Use()
     {
-        Destroy(gameObject);
         StartCoroutine(speedBoostTime());
     }
 
@@ -32,6 +31,8 @@ public class SpeedItem : MonoBehaviour
         speed = PizzaBoyController.speed;
         yield return new WaitForSeconds(1f);
         PizzaBoyController.speed = speed / 3;
-        
+
+        Destroy(gameObject);
+
     }
 }
