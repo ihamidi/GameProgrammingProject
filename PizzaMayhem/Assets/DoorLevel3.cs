@@ -14,7 +14,7 @@ public class DoorLevel3 : MonoBehaviour
     {
         if (coll.gameObject.tag == "Player")
         {
-            LoadByIndex(0);
+            LoadByIndex(6);
             //PizzaBoyController boy = coll.GetComponent<PizzaBoyController>();
             //boy.SavePlayer();
             //boy.SaveAmmo();
