@@ -14,6 +14,7 @@ TagManager:
   - AmmoCount
   - GameMaster
   - Door
+  - Walls
   layers:
   - Default
   - TransparentFX

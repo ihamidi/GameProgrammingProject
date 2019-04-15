@@ -5,7 +5,7 @@ using System;
 
 public class FirstBoss : MonoBehaviour
 {
-    public static float currentHealth = .25f;
+    public static float currentHealth = 1f;
     public GameObject door;
     public GameObject block;
 

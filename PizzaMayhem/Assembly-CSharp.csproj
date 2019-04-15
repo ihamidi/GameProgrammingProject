@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\DoorLevel3.cs" />
      <Compile Include="Assets\Scripts\AmmoItem.cs" />
      <Compile Include="Assets\Scripts\BossFight.cs" />
      <Compile Include="Assets\Scripts\BossFightSecond.cs" />
@@ -65,6 +66,7 @@
      <Compile Include="Assets\Scripts\Door.cs" />
      <Compile Include="Assets\Scripts\DoorLevel2.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
+     <Compile Include="Assets\Scripts\FinalBossShooting.cs" />
      <Compile Include="Assets\Scripts\FirstBoss.cs" />
      <Compile Include="Assets\Scripts\FirstBossHealthBar.cs" />
      <Compile Include="Assets\Scripts\FrontFacing.cs" />
