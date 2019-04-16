@@ -16,8 +16,6 @@ public class PizzaBoyController : MonoBehaviour
     public int lives = 3;
     public int ammo;
     public Animator animator;
-    public AudioSource OhBoy;
-    public AudioSource ImHurt;
 
     public Transform firePoint;
     public Transform firePointLeft;
@@ -126,7 +124,7 @@ public class PizzaBoyController : MonoBehaviour
     
     void OnTriggerEnter2D(Collider2D coll)
     {
-        ImHurt.Play();
+     
         lives = int.Parse(LifeCounter.text);
         if(coll.gameObject.tag=="CheeseBall")
             lives -= 1;
