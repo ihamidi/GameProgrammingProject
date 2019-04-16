@@ -27,7 +27,7 @@ public class SpeedItem : MonoBehaviour
 
     public void Use()
     {
-
+        if (!myImageComponent.sprite.Equals(usedImage))
         StartCoroutine(speedBoostTime());
     }
 
