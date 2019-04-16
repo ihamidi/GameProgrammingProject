@@ -34,10 +34,11 @@ public class SpeedItem : MonoBehaviour
     IEnumerator speedBoostTime()
     {
         myImageComponent.sprite = usedImage;
-        PizzaBoyController.speed = speed * 3;
+        Debug.Log("PizzaBoy Speed:" + PizzaBoyController.speed);
+        PizzaBoyController.speed = speed * 2.5f;
         speed = PizzaBoyController.speed;
-        yield return new WaitForSeconds(1f);
-        PizzaBoyController.speed = speed / 3;
+        yield return new WaitForSeconds(3f);
+        PizzaBoyController.speed = 7;
 
         Destroy(gameObject);
 
