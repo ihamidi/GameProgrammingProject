@@ -59,8 +59,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f21d5c4663ed0a04faa1819edfbe5f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  distance: 5
+  speed: 5
+  distance: 7
 --- !u!1101 &1101387073884199912
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
