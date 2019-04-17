@@ -44,7 +44,7 @@ public class PizzaBoyController : MonoBehaviour
          lives = GlobalControl.Instance.lives;
          ammo = GlobalControl.Instance.ammo;
        
-        if (SceneManager.GetActiveScene().buildIndex == 1)
+        if (SceneManager.GetActiveScene().buildIndex == 1 || SceneManager.GetActiveScene().buildIndex == 7)
         {
             lives = 3;
             ammo = 0;
