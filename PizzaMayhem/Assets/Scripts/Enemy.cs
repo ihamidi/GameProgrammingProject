@@ -6,7 +6,7 @@ using System;
 
 public class Enemy : MonoBehaviour
 { 
-    public static float currentHealth = 20;
+    public float currentHealth = 15;
 
     public void Damage(int damageVal)
     {
